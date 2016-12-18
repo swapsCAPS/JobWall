@@ -19,6 +19,7 @@
 # Learn more: http://github.com/javan/whenever
 env :PATH, ENV['PATH']
 set :output, "log/whenever.log"
+set :environment, 'development'
 
 every 1.minutes do
   runner "JobPosting.fetch_mail"
