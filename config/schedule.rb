@@ -18,6 +18,8 @@
 
 # Learn more: http://github.com/javan/whenever
 env :PATH, ENV['PATH']
+env :GMAIL_USERNAME, ENV['GMAIL_USERNAME']
+env :GMAIL_PASSWORD, ENV['GMAIL_PASSWORD']
 set :output, "log/whenever.log"
 set :environment, 'development'
 
