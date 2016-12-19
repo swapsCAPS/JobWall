@@ -19,7 +19,7 @@ class JobPosting < ApplicationRecord
           if jb.save
             # Set gmail message to 'read'
             e.read!
-            puts puts jb.to_yaml
+            puts jb.to_yaml
           end
         end
         # Log errors
