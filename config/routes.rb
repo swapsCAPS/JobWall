@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   
   root 'job_postings#index'
 
-	resources :job_postings
+  resources :job_postings
+  resources :companies
 end
