@@ -23,6 +23,6 @@ env :GMAIL_PASSWORD, ENV['GMAIL_PASSWORD']
 set :output, "log/whenever.log"
 set :environment, 'development'
 
-every 1.minutes do
+every 5.minutes do
   runner "JobPosting.fetch_mail"
 end

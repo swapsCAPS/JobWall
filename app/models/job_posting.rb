@@ -5,6 +5,9 @@ class JobPosting < ApplicationRecord
   validates :job_title, presence: true, length: { maximum: 64 }
   validates :company, presence: true
 
+  def self.textFile
+  end
+
   def self.fetch_mail
     puts "#{Time.now} fetching mail"
     # Connect to gmail using the gmail gem
@@ -31,5 +34,12 @@ class JobPosting < ApplicationRecord
         end
       end
     end
+  end
+
+  def company_name(sentence)
+    dict = LinkParser::Dictionary.new
+    sent = dict.parse(sentence)
+    puts sent.diagram
+    sent.subject
   end
 end

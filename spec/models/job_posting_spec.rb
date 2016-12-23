@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe JobPosting, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "text parsing" do
+
+    it "finds the subject" do
+      jb = JobPosting.new
+      expect(jb.company_name( "Assistant Store Managers at Dollar Tree are responsible for the following:" )).to eq("Dollar Tree")
+    end
+  end
 end
