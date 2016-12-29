@@ -1,6 +1,6 @@
 # JobWall
-
-- ```install link-grammar: http://www.abisource.com/projects/link-grammar/#download```
+- ```brew install link-grammar``` (Mac OSX)
+- ```install link-grammar: http://www.abisource.com/projects/link-grammar/#download``` (Ubuntu💀)
 - ```git clone git@github.com:stofstik/JobWall.git```
 - ```cd JobWall```
 - ```bundle install```
