@@ -11,7 +11,7 @@ class JobPosting < ApplicationRecord
   def self.fetch_mail
     puts "#{Time.now} fetching mail"
     # Connect to gmail using the gmail gem
-    Gmail.connect( ENV['GMAIL_USERNAME'], ENV['GMAIL_PASSWORD']) do |gmail|
+    Gmail.connect( ENV['NJ_GMAIL_USERNAME'], ENV['NJ_GMAIL_PASSWORD']) do |gmail|
       # Find the first 10 unread mails and loop over them
       gmail.inbox.find(:unread).first(10).each do |e|
         # Create company record unless it exists
