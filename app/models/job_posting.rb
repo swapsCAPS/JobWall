@@ -20,8 +20,10 @@ class JobPosting < ApplicationRecord
           # Create job posting record unless it exists
           jb = JobPosting.find_or_initialize_by(job_title: e.subject, company: company)
           if jb.save
-            # Set gmail message to 'read'
-            e.read!
+            # Set gmail message to 'read' if we are in production
+            if Rails.env.production?
+              e.read!
+            end
             puts jb.to_yaml
           end
         end
@@ -40,6 +42,6 @@ class JobPosting < ApplicationRecord
     dict = LinkParser::Dictionary.new
     sent = dict.parse(sentence)
     puts sent.diagram
-    sent.subject
+    sent.object
   end
 end
