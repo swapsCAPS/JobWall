@@ -40,8 +40,32 @@ class JobPosting < ApplicationRecord
 
   def company_name(sentence)
     dict = LinkParser::Dictionary.new
-    sent = dict.parse(sentence)
+    parseOptions = LinkParser::ParseOptions.new( spell_guessing_enabled: false, verbosity: 1 )
+    sent = dict.parse(sentence, parseOptions)
+    puts sent.inspect
     puts sent.diagram
-    sent.object
+    puts 'nouns:'
+    puts sent.nouns
+    puts 'verb:'
+    puts sent.verb
+    puts 'subject:'
+    puts sent.subject || ''
+    puts 'object:'
+    puts sent.object || ''
+    strip_unknown_suffix sent.subject
+  end
+
+  def strip_unknown_suffix(word)
+    if unkown_word?(word)
+      word[0, word.length - 3]
+    end
+  end
+
+  def unkown_word?(word)
+    if word[-3, 3].include? "[!]"
+      true
+    else
+      false
+    end
   end
 end
