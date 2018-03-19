@@ -50,11 +50,19 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
+    concurrent-ruby (1.0.4-java)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
+    ffi (1.9.14-java)
+    ffi (1.9.14-x64-mingw32)
+    ffi (1.9.14-x86-mingw32)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     gmail (0.6.0)
@@ -88,11 +96,20 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     nio4r (1.2.1)
+    nio4r (1.2.1-java)
     nokogiri (1.7.0)
+      mini_portile2 (~> 2.1.0)
+    nokogiri (1.7.0-java)
+    nokogiri (1.7.0-x64-mingw32)
+      mini_portile2 (~> 2.1.0)
+    nokogiri (1.7.0-x86-mingw32)
       mini_portile2 (~> 2.1.0)
     oauth (0.5.1)
     pg (0.19.0)
+    pg (0.19.0-x64-mingw32)
+    pg (0.19.0-x86-mingw32)
     puma (3.6.2)
+    puma (3.6.2-java)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -169,12 +186,15 @@ GEM
     temple (0.7.7)
     thor (0.19.4)
     thread_safe (0.3.5)
+    thread_safe (0.3.5-java)
     tilt (2.0.5)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2018.3)
+      tzinfo (>= 1.0.0)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     web-console (3.4.0)
@@ -184,16 +204,23 @@ GEM
       railties (>= 5.0)
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
+    websocket-driver (0.6.4-java)
+      websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     whenever (0.9.7)
       chronic (>= 0.6.3)
 
 PLATFORMS
+  java
   ruby
+  x64-mingw32
+  x86-mingw32
+  x86-mswin32
 
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  dotenv-rails
   gmail
   jbuilder (~> 2.5)
   jquery-rails
@@ -217,4 +244,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.13.7
+   1.16.1
