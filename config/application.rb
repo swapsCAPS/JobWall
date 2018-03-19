@@ -11,10 +11,14 @@ require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
-
+require 'dotenv/load'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+#use constants to reduce dependency.
+NJ_GMAIL_USERNAME = ENV['NJ_GMAIL_USERNAME']
+NJ_GMAIL_PASSWORD = ENV['NJ_GMAIL_PASSWORD']
 
 module JobWall
   class Application < Rails::Application
