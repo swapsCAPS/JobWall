@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.3'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -39,9 +39,11 @@ gem 'gmail'
 gem 'linkparser'
 
 group :development, :test do
+
+  gem 'dotenv-rails'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 end
 

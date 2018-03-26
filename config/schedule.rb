@@ -17,12 +17,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-env :PATH, ENV['PATH']
-env :NJ_GMAIL_USERNAME, ENV['NJ_GMAIL_USERNAME']
-env :NJ_GMAIL_PASSWORD, ENV['NJ_GMAIL_PASSWORD']
-set :output, "log/whenever.log"
-set :environment, 'development'
 
-every 24.hours do
-  runner "JobPosting.fetch_mail"
+set :output, "log/whenever.log"
+
+every 1.minute do
+  rake "fetchmails:fetch"
 end
