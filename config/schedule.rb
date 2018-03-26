@@ -20,6 +20,6 @@
 
 set :output, "log/whenever.log"
 
-every 1.minute do
+every 12.hours do
   rake "fetchmails:fetch"
 end
